@@ -15,6 +15,8 @@ class ProductModel extends ProductEntity {
   final String image;
   @JsonKey(defaultValue: 0)
   final double price;
+  @JsonKey(defaultValue: '')
+  final String description;
 
   @JsonKey(name: 'rating')
   final ProductRatingModel? productRatingModel;
@@ -28,9 +30,9 @@ class ProductModel extends ProductEntity {
       required this.category,
       required this.image,
       required this.price,
+      required this.description,
       required this.productRatingModel})
-      : super(null, id: id, title: title, category: category, image: image, price: price,
-      );
+      : super(null, id: id, title: title, category: category, image: image, price: price);
 
   Map<String, dynamic> toJson() => _$ProductModelToJson(this);
 }

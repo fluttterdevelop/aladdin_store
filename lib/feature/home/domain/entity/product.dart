@@ -1,29 +1,16 @@
 import 'package:aladdin_store/feature/home/data/models/product.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class ProductEntity {
-  final int id;
-  final String title;
-  final String category;
-  final String image;
-  final double price;
+part 'product.freezed.dart';
 
-  // birinchi usuli
-  final ProductRatingModel? productRatingModel;
-
-  // ikkinchi usuli
-  // final int rate;
-
-  ProductEntity(
-    // birinchi usuli
-    this.productRatingModel,
-
-    // ikkinchi usuli
-    // this.rate,
-    {
-    required this.id,
-    required this.title,
-    required this.category,
-    required this.image,
-    required this.price,
-  });
+@Freezed()
+class ProductEntity with _$ProductEntity {
+  const factory ProductEntity(ProductRatingModel? productRatingModel, {
+    required int id,
+    required double price,
+    required String title,
+    required String category,
+    required String image,
+    required String description,
+  }) = _ProductEntity;
 }

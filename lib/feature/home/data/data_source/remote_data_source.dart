@@ -15,6 +15,8 @@ class _HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
     try {
       final response = await dio.get('/products');
 
+      
+
       if (response.statusCode! >= 200 && response.statusCode! < 300) {
         return (response.data as List)
             .map((json) => ProductModel.fromJson(json))

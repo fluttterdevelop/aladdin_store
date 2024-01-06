@@ -7,7 +7,7 @@ import 'package:aladdin_store/feature/home/domain/repository/product.dart';
 class GetProductUseCase implements UseCase<List<ProductEntity>, NoParams> {
   final ProductRepository _repository;
 
-  GetProductUseCase(ProductRepository repository) : _repository = repository;
+  const GetProductUseCase(ProductRepository repository) : _repository = repository;
 
   @override
   Future<Either<Failure, List<ProductEntity>>> call(NoParams params) {

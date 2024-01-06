@@ -23,18 +23,43 @@ dependencies:
   http_mock_adapter: ^0.6.1 
   cupertino_icons: ^1.0.6
   dio: ^5.4.0
+  flutter_launcher_icons: any
+  freezed_annotation: ^2.4.1
+  intl: ^0.19.0
+  google_fonts: ^6.1.0
+  gap: ^3.0.1
+  
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
    
-    
+  freezed: ^2.4.6
   flutter_lints: ^3.0.0
   # json generate qilib beradi
 
   json_serializable: ^6.7.1
   build_runner: ^2.4.7
+  
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo/logo.jpeg"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/logo/logo.jpeg"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets/logo/logo.jpeg"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/logo/logo.jpeg"
 
   
 flutter:
@@ -43,7 +68,8 @@ flutter:
     
     
   uses-material-design: true
-
+  assets:
+    - assets/
     
     
     

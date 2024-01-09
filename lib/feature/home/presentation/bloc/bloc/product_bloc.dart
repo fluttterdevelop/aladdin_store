@@ -11,16 +11,7 @@ import '../../../data/repository/product.dart';
 part 'product_event.dart';
 part 'product_state.dart';
 
-// class ProductBloc extends Bloc<ProductEvent, ProductState> {
-//   ProductBloc() : super(_Initial());
 
-//   @override
-//   Stream<ProductState> mapEventToState(
-//     ProductEvent event,
-//   ) async* {
-//     // TODO: implement mapEventToState
-//   }
-// }
 
 class ProductBloc extends Bloc<ProductEvent, ProductState> {
   ProductBloc() : super(ProductState.empty()) {
